@@ -1,0 +1,90 @@
+
+h2 {
+    text-transform: uppercase;
+}
+a {
+    text-decoration: none;
+}
+.logo__title {
+    color: #fff;
+    font-weight: 800;
+    font-size: 34px;
+}
+.app-nav {
+    padding: 30px 0;
+    background-color: #000;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+.navigation-container {
+    display: flex;
+    align-items: center;
+}
+.nav {
+    display: flex;
+    align-items: center;
+}
+img {
+    width: 140px;
+    height: 30px;
+}
+
+ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    align-items: center;
+}
+
+li {
+    margin-left: 40px;
+}
+
+li:first-child {
+    margin-left: 0;
+}
+
+.nav__link {
+    color: #fff;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s linear;
+}
+
+.nav__link:hover,
+.nav__link.active {
+    color: #2c82d3;
+}
+
+.log-container ul {
+    display: flex;
+    align-items: center;
+}
+
+.sign-up {
+    display: inline-block;
+    padding: 5px;
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #d3992c;
+    border-radius: 3px;
+    background-color: #f5a003;
+}
+
+
+.text {
+    color: #fff;
+}

@@ -1,0 +1,21 @@
+<div class="register">
+  <form class="form" #f="ngForm" (ngSubmit)="onSubmit(f)"> 
+      <div class="form__header">
+          <h2 class="form__title">Register</h2>
+          <p class="form__legend">Please fill in the information below:</p>
+      </div>
+      <div class="form__item">
+        <input class="input" type="text" placeholder="First name" name="firstName" ngModel #firstName="ngModel">
+      </div>
+      <div class="form__item">
+        <input class="input" type="text" placeholder="Last name" name="lastName" ngModel #lastName="ngModel">
+      </div>
+      <div class="form__item">
+          <input class="input" type="text" placeholder="Username" name="username" ngModel #username="ngModel">
+      </div>
+      <div class="form__item">
+          <input class="input" type="password" placeholder="Password" name="password" ngModel #password="ngModel">
+      </div>
+      <button class="submit">Login</button>
+  </form>
+</div>

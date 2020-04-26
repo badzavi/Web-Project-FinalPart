@@ -1,0 +1,28 @@
+<div class="comments">
+  <div class="container">
+    <h3 class="title">Comments</h3>
+    <div class="wrapper-btn">
+      <button class="btn btn-success" (click)="addComment()">Add Comment</button>
+      <input class="input" type="text" name="content" [(ngModel)]="content">
+    </div>
+    <div *ngIf="comments.length>0">
+      <div class="box" *ngFor="let comment of comments">
+        <div class="box__header">
+          <p class="date">Publish Date: {{changeDateFormat(comment.created_date)}}</p>
+          <p class="user">Created By: {{comment.created_by.username}}</p>
+        </div>
+        <div class="wrapper">
+          <p class="content">{{comment.content}}</p>
+        </div>
+        <div *ngIf="comment.created_by.username == username" class="edit" >
+          <button class="btn btn-primary" (click)="openSave($event)">Edit</button>
+          <button class="btn btn-delete btn-danger" (click)="delete(comment)">Delete</button>
+        </div>
+        <div class="input-box">
+          <input class="input" type="text" name="content" ngModel [(ngModel)]="comment.content">
+          <button class="btn btn-success" (click)="save(comment)">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="product-list">
+    <h2>Cart</h2>
+    <div class="container"> 
+        <div class="row">
+            <div class="col-lg-4" *ngFor="let product of products">
+                <div class="product">
+                    <h3 class="product-title">
+                        <a [routerLink]="['/products', product.id]" routerLinkActive="router-link-active" >{{product.name}}</a>
+                    </h3>
+                    <p class="product-price">KZT {{product.price}}</p>
+                    <button
+                    (click)="deleteCartProduct(product.id)">Delete From Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

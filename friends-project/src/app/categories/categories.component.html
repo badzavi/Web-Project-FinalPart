@@ -1,0 +1,14 @@
+<div class="wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 category" *ngFor="let category of categories">
+                <div class="inner">
+                    <div class="image" [ngStyle]="{backgroundImage: category.img}">
+                    </div>
+                    <a [routerLink]="['/categories', category.id]"  class="image__link">{{ category.name }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

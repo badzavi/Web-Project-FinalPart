@@ -1,0 +1,32 @@
+<div class="product-detail" *ngIf="this.product$ | async as product">
+    <div class="container">
+        <div class="container-slider">
+          <img [src]="product.img" class="d-block w-100" alt="...">
+        </div>
+        <div class="product">
+            <div class="product-container">
+                <h2 class="product__title">{{ product.name }}</h2>
+                <p class="product__description">{{ product.description }}</p>
+                <p class="product__price">KZT {{ product.price }}</p>
+                <div class="wrapper-btn" *ngIf="authService.isAuthorized()">
+                    <div class="cart-button">
+                        <button class="btn update-btn"
+                        (click)="update = !update">Update</button>
+                    </div>
+                    <div class="cart-button">
+                      <button class="btn delete-btn"
+                      (click)="delete(product)">Delete</button>
+                    </div>
+                    <div class="cart-button">
+                        <button class="btn"
+                        (click)="addProduct(product)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="update">
+        <app-product-change [product]="product"></app-product-change>
+    </div>
+    <app-comments [comments]="product.comments" [product_id]="product.id"></app-comments>
+</div>
